@@ -267,10 +267,10 @@
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Material
-                <i class="right fas fa-angle-left"></i>
+                {{-- <i class="right fas fa-angle-left"></i> --}}
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/efmaterial" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -283,17 +283,17 @@
                   <p>Efisiensi</p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
           <li class="nav-item">
             <a href="/service" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>
               <p>
                 Service
-                <i class="fas fa-angle-left right"></i>
+                {{-- <i class="fas fa-angle-left right"></i> --}}
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/efservice" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -306,20 +306,20 @@
                   <p>Efisiensi</p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
-          {{-- <li class="nav-item">
+          <li class="nav-item">
             <a href="/compiled" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
-                Efisiensi
+                Hasil Negosiasi
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/materialEfficiency" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-lightbulb nav-icon"></i>
                   <p>Material</p>
                 </a>
               </li>
@@ -327,7 +327,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/serviceEfficiency" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-lightbulb nav-icon"></i>
                   <p>Service</p>
                 </a>
               </li>
@@ -335,12 +335,12 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-lightbulb nav-icon"></i>
                   <p>Compiled</p>
                 </a>
               </li>
             </ul>
-          </li> --}}
+          </li>
           {{-- <li class="nav-header">MISCELLANEOUS</li> --}}
           <hr>
 
@@ -348,18 +348,28 @@
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Proc SLA
+                Report
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
 
           <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Lead Time Proccess
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+
+          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 UKT-KMJ Mat & Ser
-                {{-- <i class="fas fa-angle-left right"></i> --}}
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -370,7 +380,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <hr>
 
@@ -394,7 +404,7 @@
               <li class="nav-item">
                 <a href="/ship" class="nav-link">
                   <i class="fas fa-ship nav-icon"></i>
-                  <p>Kapal</p>
+                  <p>Nomenklatur End User</p>
                 </a>
               </li>
             </ul>

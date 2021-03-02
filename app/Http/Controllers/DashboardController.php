@@ -17,7 +17,7 @@ class DashboardController extends Controller
     public function index()
     {
         $db_value = MaterialService::get();
-        $data['dashboard'] = ;
+        // $data['dashboard'] = ;
         $data['nama_menu'] = 'Dashboard';
 
         return view('base.pages.dashboard', $data);
