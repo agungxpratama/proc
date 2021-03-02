@@ -6,12 +6,12 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0">Dashboard v2</h1>
+        <h1 class="m-0">{{$nama_menu}}</h1>
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard v2</li>
+          <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </div><!-- /.col -->
     </div><!-- /.row -->
@@ -26,10 +26,10 @@
     <div class="row">
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box">
-          <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+          <span class="info-box-icon bg-info elevation-1"><i class="fas fa-play"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">CPU Traffic</span>
+            <span class="info-box-text">ON GOING</span>
             <span class="info-box-number">
               10
               <small>%</small>
@@ -42,10 +42,10 @@
       <!-- /.col -->
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-pause"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Likes</span>
+            <span class="info-box-text">ON HOLD</span>
             <span class="info-box-number">41,410</span>
           </div>
           <!-- /.info-box-content -->
@@ -59,10 +59,10 @@
 
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+          <span class="info-box-icon bg-success elevation-1"><i class="fas fa-check"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Sales</span>
+            <span class="info-box-text">COMPLETED</span>
             <span class="info-box-number">760</span>
           </div>
           <!-- /.info-box-content -->
@@ -72,10 +72,10 @@
       <!-- /.col -->
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+          <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-times"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">New Members</span>
+            <span class="info-box-text">CANCELED</span>
             <span class="info-box-number">2,000</span>
           </div>
           <!-- /.info-box-content -->
@@ -115,7 +115,77 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <div class="row">
+              <div class="row">
+                  <div class="col-md-8">
+                      <p class="text-center">
+                        <strong>Jenis Pengadaan</strong>
+                        <br>pada hari ini
+                      </p>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <p class="text-center">
+                                <strong>Sinergi Pertamina</strong>
+                                {{-- <br>pada hari ini --}}
+                              </p>
+                              <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                          </div>
+                          <div class="col-md-6">
+                              <p class="text-center">
+                                <strong>Reguler</strong>
+                                {{-- <br>pada hari ini --}}
+                              </p>
+                              <canvas id="donutChart1" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-md-4">
+                      <div class="row">
+                          <div class="col-12">
+                              <div class="description-block border-bottom pb-3">
+                                  <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 17%</span>
+                                  <h5 class="description-header">$35,210.43</h5>
+                                  <span class="description-text">JUMLAH PERMINTAAN PENGADAAN</span>
+                              </div>
+                              <!-- /.description-block -->
+                          </div>
+                          <div class="col-12">
+                            <div class="description-block border-bottom pb-3">
+                              <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 0%</span>
+                              <h5 class="description-header">$10,390.90</h5>
+                              <span class="description-text">NILAI KONTRAK TERTINGGI</span>
+                            </div>
+                            <!-- /.description-block -->
+                          </div>
+                          <div class="col-12">
+                            <div class="description-block border-bottom pb-3">
+                              <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 20%</span>
+                              <h5 class="description-header">$24,813.53</h5>
+                              <span class="description-text">NILAI KONTRAK TERENDAH</span>
+                            </div>
+                            <!-- /.description-block -->
+                          </div>
+                          <div class="col-12">
+                            <div class="description-block border-bottom pb-3">
+                              <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 0%</span>
+                              <h5 class="description-header">$10,390.90</h5>
+                              <span class="description-text">PROC. PROCCESS TIME ACC (%)</span>
+                            </div>
+                            <!-- /.description-block -->
+                          </div>
+                          <div class="col-12">
+                            <div class="description-block pb-3">
+                              <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 18%</span>
+                              <h5 class="description-header">1200</h5>
+                              <span class="description-text">KOMITMEN TKD (%)</span>
+                            </div>
+                            <!-- /.description-block -->
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+            {{-- <div class="row">
               <div class="col-md-8">
                 <p class="text-center">
                   <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
@@ -170,11 +240,11 @@
                 <!-- /.progress-group -->
               </div>
               <!-- /.col -->
-            </div>
+            </div> --}}
             <!-- /.row -->
           </div>
           <!-- ./card-body -->
-          <div class="card-footer">
+          {{-- <div class="card-footer">
             <div class="row">
               <div class="col-sm-3 col-6">
                 <div class="description-block border-right">
@@ -213,8 +283,191 @@
               </div>
             </div>
             <!-- /.row -->
-          </div>
+          </div> --}}
           <!-- /.card-footer -->
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">SLA Achievment</h5>
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            {{-- <i class="fas fa-minus"></i> --}}
+                            VIew Details
+                          </button>
+                          {{-- <div class="btn-group">
+                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                              <i class="fas fa-wrench"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                              <a href="#" class="dropdown-item">Action</a>
+                              <a href="#" class="dropdown-item">Another action</a>
+                              <a href="#" class="dropdown-item">Something else here</a>
+                              <a class="dropdown-divider"></a>
+                              <a href="#" class="dropdown-item">Separated link</a>
+                            </div>
+                          </div> --}}
+                          <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tr>
+                                <td class="text-bold">Sinergi</td>
+                                <td>12312</td>
+                            </tr>
+                            <tr>
+                                <td class="text-bold">Sinergi</td>
+                                <td>12312</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Log Activity</h5>
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            {{-- <i class="fas fa-minus"></i> --}}
+                            VIew Details
+                          </button>
+                          {{-- <div class="btn-group">
+                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                              <i class="fas fa-wrench"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                              <a href="#" class="dropdown-item">Action</a>
+                              <a href="#" class="dropdown-item">Another action</a>
+                              <a href="#" class="dropdown-item">Something else here</a>
+                              <a class="dropdown-divider"></a>
+                              <a href="#" class="dropdown-item">Separated link</a>
+                            </div>
+                          </div> --}}
+                          <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tr>
+                                <th></th>
+                                <th>Nama</th>
+                                <th>Aktivitas</th>
+                            </tr>
+                            <tr>
+                                <td class="text-bold">
+                                    <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                </td>
+                                <td class="text-bold">Sinergi</td>
+                                <td>12312</td>
+                            </tr>
+                            <tr>
+                                <td class="text-bold">
+                                    <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                </td>
+                                <td class="text-bold">Sinergi</td>
+                                <td>12312</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Realisasi Cost Saving</h5>
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            {{-- <i class="fas fa-minus"></i> --}}
+                            VIew Details
+                          </button>
+                          {{-- <div class="btn-group">
+                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                              <i class="fas fa-wrench"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                              <a href="#" class="dropdown-item">Action</a>
+                              <a href="#" class="dropdown-item">Another action</a>
+                              <a href="#" class="dropdown-item">Something else here</a>
+                              <a class="dropdown-divider"></a>
+                              <a href="#" class="dropdown-item">Separated link</a>
+                            </div>
+                          </div> --}}
+                          <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tr>
+                                <td class="text-bold">Pengadaan</td>
+                                <td>12312</td>
+                            </tr>
+                            <tr>
+                                <td class="text-bold">Sinergi</td>
+                                <td>12312</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Status Kontrak</h5>
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            {{-- <i class="fas fa-minus"></i> --}}
+                            VIew Details
+                          </button>
+                          {{-- <div class="btn-group">
+                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                              <i class="fas fa-wrench"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                              <a href="#" class="dropdown-item">Action</a>
+                              <a href="#" class="dropdown-item">Another action</a>
+                              <a href="#" class="dropdown-item">Something else here</a>
+                              <a class="dropdown-divider"></a>
+                              <a href="#" class="dropdown-item">Separated link</a>
+                            </div>
+                          </div> --}}
+                          <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tr>
+                                <th colspan="2">Daftar Kontrak</th>
+                                <th>Aktivitas</th>
+                            </tr>
+                            <tr>
+                                <td class="text-bold"><i class="fas fa-check-circle text-success"></i></td>
+                                <td class="text-bold">Sinergi</td>
+                                <td>
+                                    <div class="badge badge-success">
+                                        ON GOING
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-bold"><i class="fas fa-check-circle text-secondary  "></i></td>
+                                <td class="text-bold">Sinergi</td>
+                                <td>
+                                    <div class="badge badge-warning">
+                                        ON HOLD
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.card -->
       </div>

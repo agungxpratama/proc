@@ -5,9 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Material extends Model
+class Kapal extends Model
 {
     use HasFactory;
-
-    protected $table = 'material_service';
 }

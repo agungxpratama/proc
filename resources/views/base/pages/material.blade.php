@@ -57,40 +57,41 @@
                       <thead>
                       <tr>
                         <th>No.</th>
-                        <th>ID Proc</th>
+                        {{-- <th>ID Proc</th> --}}
                         <th>No Ref Req</th>
-                        <th>No Memorandum</th>
+                        {{-- <th>No Memorandum</th> --}}
                         <th>Kapal</th>
                         <th>Deskripsi</th>
                         <th>Status Part</th>
-                        <th>Tanggal Terima</th>
+                        {{-- <th>Tanggal Terima</th> --}}
                         <th>Buyers</th>
-                        <th>No Proc</th>
-                        <th>Proses</th>
-                        <th>Metode</th>
-                        <th>No Rfq</th>
-                        <th>Tgl Rfq</th>
-                        <th>Tgl Rfq Ul</th>
-                        <th>Memo Revisi</th>
-                        <th>Tgl Baep Berkas Revisi</th>
-                        <th>Tgl Baep Berkas Kembali</th>
+                        {{-- <th>No Proc</th> --}}
+                        {{-- <th>Proses</th> --}}
+                        {{-- <th>Metode</th> --}}
+                        {{-- <th>No Rfq</th> --}}
+                        {{-- <th>Tgl Rfq</th> --}}
+                        {{-- <th>Tgl Rfq Ul</th> --}}
+                        {{-- <th>Memo Revisi</th> --}}
+                        {{-- <th>Tgl Baep Berkas Revisi</th> --}}
+                        {{-- <th>Tgl Baep Berkas Kembali</th> --}}
                         <th>Vendor</th>
-                        <th>Anak Perusahaan</th>
-                        <th>No PO</th>
-                        <th>Tgl PO</th>
-                        <th>Delivate PO</th>
+                        {{-- <th>Anak Perusahaan</th> --}}
+                        {{-- <th>No PO</th> --}}
+                        {{-- <th>Tgl PO</th> --}}
+                        {{-- <th>Delivate PO</th> --}}
                         <th>Nilai PO</th>
-                        <th>Estimasi</th>
-                        <th>Cost Saving</th>
-                        <th>No Kontrak</th>
-                        <th>Tgl Kontrak</th>
-                        <th>Selesai Dokumen</th>
-                        <th>PO Terima Vendor</th>
-                        <th>Fungsi</th>
-                        <th>SA</th>
-                        <th>GR</th>
-                        <th>Keterangan</th>
-                        <th>PO Selesai Bulan</th>
+                        <th>Aksi</th>
+                        {{-- <th>Estimasi</th> --}}
+                        {{-- <th>Cost Saving</th> --}}
+                        {{-- <th>No Kontrak</th> --}}
+                        {{-- <th>Tgl Kontrak</th> --}}
+                        {{-- <th>Selesai Dokumen</th> --}}
+                        {{-- <th>PO Terima Vendor</th> --}}
+                        {{-- <th>Fungsi</th> --}}
+                        {{-- <th>SA</th> --}}
+                        {{-- <th>GR</th> --}}
+                        {{-- <th>Keterangan</th> --}}
+                        {{-- <th>PO Selesai Bulan</th> --}}
                       </tr>
                       </thead>
                       <tbody>
@@ -103,40 +104,66 @@
                           @endphp
                               <tr>
                                   <td>{{$no}}</td>
-                                  <td>{{$d->id_proc}}</td>
+                                  {{-- <td>{{$d->id_proc}}</td> --}}
                                   <td>{{$d->no_ref_req}}</td>
-                                  <td>{{$d->no_memorandum}}</td>
-                                  <td>{{$d->kapal}}</td>
-                                  <td>{{$d->description}}</td>
-                                  <td>{{$d->status_part}}</td>
-                                  <td>{{$d->tgl_trm_berkas}}</td>
+                                  {{-- <td>{{$d->no_memorandum}}</td> --}}
+                                  <td>
+                                     <b>
+                                      {{$d->kapal}}
+                                    </b>
+                                  </td>
+                                  <td>
+                                      <b>
+                                          {{$d->description}}
+                                      </b>
+                                      <br>{{$d->tgl_trm_berkas}}
+                                  </td>
+                                  <td>
+                                      <b>
+                                          {{$d->status_part}}
+                                      </b>
+                                  </td>
+                                  {{-- <td>{{$d->tgl_trm_berkas}}</td> --}}
                                   <td>{{$d->buyers}}</td>
-                                  <td>{{$d->no_pr}}</td>
-                                  <td>{{$d->proses}}</td>
-                                  <td>{{$d->metode}}</td>
-                                  <td>{{$d->no_rfq}}</td>
-                                  <td>{{$d->tgl_rfq}}</td>
-                                  <td>{{$d->tgl_rfq_ul}}</td>
-                                  <td>{{$d->memo_revisi}}</td>
-                                  <td>{{$d->tgl_trm_berkas_revisi}}</td>
-                                  <td>{{$d->tgl_baep_kembali}}</td>
+                                  {{-- <td>{{$d->no_pr}}</td> --}}
+                                  {{-- <td>{{$d->proses}}</td> --}}
+                                  {{-- <td>{{$d->metode}}</td> --}}
+                                  {{-- <td>{{$d->no_rfq}}</td> --}}
+                                  {{-- <td>{{$d->tgl_rfq}}</td> --}}
+                                  {{-- <td>{{$d->tgl_rfq_ul}}</td> --}}
+                                  {{-- <td>{{$d->memo_revisi}}</td> --}}
+                                  {{-- <td>{{$d->tgl_trm_berkas_revisi}}</td> --}}
+                                  {{-- <td>{{$d->tgl_baep_kembali}}</td> --}}
                                   <td>{{$d->vendor}}</td>
-                                  <td>{{$d->anak_perusahaan}}</td>
-                                  <td>{{$d->no_po}}</td>
-                                  <td>{{$d->tgl_po}}</td>
-                                  <td>{{$d->delivate_po}}</td>
+                                  {{-- <td>{{$d->anak_perusahaan}}</td> --}}
+                                  {{-- <td>{{$d->no_po}}</td> --}}
+                                  {{-- <td>{{$d->tgl_po}}</td> --}}
+                                  {{-- <td>{{$d->delivate_po}}</td> --}}
                                   <td>{{$d->nilai_po}}</td>
-                                  <td>{{$d->estimasi}}</td>
-                                  <td>{{$d->cost_saving}}</td>
-                                  <td>{{$d->no_kontrak}}</td>
-                                  <td>{{$d->tgl_kontrak}}</td>
-                                  <td>{{$d->selesai_dokumen}}</td>
-                                  <td>{{$d->po_terima_vendor}}</td>
-                                  <td>{{$d->fungsi}}</td>
-                                  <td>{{$d->sa}}</td>
-                                  <td>{{$d->gr}}</td>
-                                  <td>{{$d->keterangan}}</td>
-                                  <td>{{$d->po_selesai_bulan}}</td>
+                                  {{-- <td>{{$d->estimasi}}</td> --}}
+                                  {{-- <td>{{$d->cost_saving}}</td> --}}
+                                  {{-- <td>{{$d->no_kontrak}}</td> --}}
+                                  {{-- <td>{{$d->tgl_kontrak}}</td> --}}
+                                  {{-- <td>{{$d->selesai_dokumen}}</td> --}}
+                                  {{-- <td>{{$d->po_terima_vendor}}</td> --}}
+                                  {{-- <td>{{$d->fungsi}}</td> --}}
+                                  {{-- <td>{{$d->sa}}</td> --}}
+                                  {{-- <td>{{$d->gr}}</td> --}}
+                                  {{-- <td>{{$d->keterangan}}</td> --}}
+                                  {{-- <td>{{$d->po_selesai_bulan}}</td> --}}
+                                  <td>
+                                      <div class="btn-group">
+                                        <button type="button" class="btn btn-success">
+                                          <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-primary">
+                                          <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-danger">
+                                          <i class="fas fa-trash"></i>
+                                        </button>
+                                      </div>
+                                  </td>
                               </tr>
                           @endforeach
                       </tfoot>

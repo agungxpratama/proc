@@ -25,9 +25,14 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 Route::get('/material', [App\Http\Controllers\MaterialController::class, 'index'])->name('material');
 Route::get('/efmaterial', [App\Http\Controllers\MaterialController::class, 'efMat'])->name('efMaterial');
 Route::get('/materialEfficiency', [App\Http\Controllers\MaterialController::class, 'materialEfficiency'])->name('materialEfficiency');
+Route::get('/input', [App\Http\Controllers\MaterialController::class, 'inputMaterial'])->name('inputMaterial');
+
 
 Route::get('/service', [App\Http\Controllers\ServiceController::class, 'index'])->name('service');
 Route::get('/efservice', [App\Http\Controllers\ServiceController::class, 'efSer'])->name('efService');
-Route::get('/serviceEfficiency', [App\Http\Controllers\MaterialController::class, 'serviceEfficiency'])->name('serviceEfficiency');
+Route::get('/serviceEfficiency', [App\Http\Controllers\ServiceController::class, 'serviceEfficiency'])->name('serviceEfficiency');
+
+Route::get('/ship', [App\Http\Controllers\ShipController::class, 'index'])->name('ship');
+Route::get('/addShip', [App\Http\Controllers\ShipController::class, 'addShip'])->name('addShip');
 
 Route::get('/compiled', [App\Http\Controllers\CompiledController::class, 'index'])->name('compiled');

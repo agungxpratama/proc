@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MaterialService;
+
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -14,6 +16,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('base.pages.dashboard');
+        $db_value = MaterialService::get();
+        $data['dashboard'] = ;
+        $data['nama_menu'] = 'Dashboard';
+
+        return view('base.pages.dashboard', $data);
     }
 }
